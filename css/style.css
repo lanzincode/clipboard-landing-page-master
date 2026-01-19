@@ -120,6 +120,7 @@
     text-align: center;
   }
 
+  /* HERO / HEADER */
   .hero {
     position: relative;
     padding: var(--space-2xl);
@@ -136,6 +137,10 @@
       background-size: contain;
 
       top: 0;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -151,14 +156,21 @@
 
   .hero__text {
     --p-fs: var(--fs-lg);
-    --p-mb: var(--space-xl);
     max-width: 70rem;
   }
 
   .cta-group {
+    margin-top: var(--space-xl);
+
     display: flex;
     gap: var(--space-md);
     align-items: center;
+
+    @media (width < 600px) {
+      width: 100%;
+
+      flex-direction: column;
+    }
   }
 
   .btn--primary {
@@ -173,6 +185,10 @@
     border-radius: var(--radius-full);
     box-shadow: 0 10px 30px -5px var(--color-primary-500-shadow);
     transition: opacity var(--duration-md) ease;
+
+    @media (width < 600px) {
+      width: 100%;
+    }
   }
 
   .btn--secondary {
@@ -187,11 +203,15 @@
     border-radius: var(--radius-full);
     box-shadow: 0 10px 30px -5px var(--color-primary-100-shadow);
     transition: opacity var(--duration-md) ease;
+
+    @media (width < 600px) {
+      width: 100%;
+    }
   }
 
   .btn--primary:hover,
   .btn--secondary:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   /* FEATURES */
@@ -209,6 +229,194 @@
     padding: var(--space-2xl);
   }
 
-  .fea
+  .features__title,
+  .access__title,
+  .advantages__title,
+  .download__title {
+    --heading-fs: var(--fs-2xl);
+    --heading-mb: var(--space-lg);
+  }
 
+  .features__text,
+  .access__text,
+  .advantages__text,
+  .download__text {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  .features__inner {
+    width: 100%;
+    padding: var(--space-lg);
+    text-align: left;
+
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: minmax(0, var(--space-2xl));
+
+    img {
+      width: 100%;
+      margin-left: -9rem;
+
+      @media (width < 600px) {
+        margin: 0 0 var(--space-2xl);
+      }
+    }
+
+    @media (width < 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .features__inner__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: var(--space-md);
+
+    @media (width < 600px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .features__inner__card {
+    padding: var(--space-md);
+  }
+
+  .card__title {
+    --heading-fs: var(--fs-lead);
+    --heading-mb: var(--space-sm);
+  }
+
+  .card__text {
+    --p-fs: var(--fs-sm);
+    max-width: 35rem;
+  }
+
+  /* ACCESS */
+
+  .access {
+    --sect-pd: var(--space-2xl);
+
+    img {
+      width: 60%;
+      margin: var(--space-2xl) 0;
+
+      @media (width < 600px) {
+        width: 100%;
+      }
+    }
+  }
+
+  /* ADVANTAGES */
+
+  .advantages {
+    --sect-pd: var(--space-2xl);
+  }
+  .advantages__cards {
+    padding: var(--space-2xl) 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .advantages__card {
+    padding: var(--space-md);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantages__img {
+    min-width: 5rem;
+    min-height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* CLIENTS */
+
+  .clients {
+    --sect-pd: var(--space-2xl);
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    img {
+      padding: var(--space-md);
+    }
+  }
+
+  /* DOWNLOAD */
+
+  .download {
+    --sect-pd: 0 var(--space-2xl);
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: var(--space-2xl);
+    background-color: var(--gray-100);
+    color: var(--color-neutral-700);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__inner {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--space-lg);
+
+    @media (width < 600px) {
+      flex-direction: column;
+    }
+  }
+
+  .footer__img {
+    width: 8rem;
+  }
+
+  .footer__list {
+    max-width: 35rem;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+
+    
+
+    @media (width < 600px) {
+      flex-direction: column;
+    }
+  }
+  
+  .social__list {
+    max-width: 35rem;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: var(--space-lg);
+
+    img {
+      min-width: 3rem;
+    }
+  }
+    
 }
