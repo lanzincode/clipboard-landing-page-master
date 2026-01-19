@@ -345,7 +345,7 @@
   /* CLIENTS */
 
   .clients {
-    --sect-pd: var(--space-2xl);
+    --sect-pd: 0 var(--space-2xl);
 
     flex-direction: row;
     flex-wrap: wrap;
@@ -358,7 +358,7 @@
   /* DOWNLOAD */
 
   .download {
-    --sect-pd: 0 var(--space-2xl);
+    --sect-pd: var(--space-2xl);
   }
 
   /* FOOTER */
